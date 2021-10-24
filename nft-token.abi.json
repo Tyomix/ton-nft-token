@@ -1,0 +1,97 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "createToken",
+			"inputs": [
+				{"name":"name","type":"string"},
+				{"name":"galaxy","type":"string"},
+				{"name":"age","type":"uint256"},
+				{"name":"mass","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "getTokenById",
+			"inputs": [
+				{"name":"tokenIndex","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"name","type":"string"},
+				{"name":"galaxy","type":"string"},
+				{"name":"age","type":"uint256"},
+				{"name":"mass","type":"uint256"}
+			]
+		},
+		{
+			"name": "getTokenByName",
+			"inputs": [
+				{"name":"name","type":"string"}
+			],
+			"outputs": [
+				{"name":"galaxy","type":"string"},
+				{"name":"age","type":"uint256"},
+				{"name":"mass","type":"uint256"}
+			]
+		},
+		{
+			"name": "getTokenOwner",
+			"inputs": [
+				{"name":"tokenIndex","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "setTokenOwner",
+			"inputs": [
+				{"name":"tokenIndex","type":"uint256"},
+				{"name":"newOwnerPubKey","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setTokenPrice",
+			"inputs": [
+				{"name":"tokenIndex","type":"uint256"},
+				{"name":"price","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getTokenPrice",
+			"inputs": [
+				{"name":"tokenIndex","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"components":[{"name":"name","type":"string"},{"name":"galaxy","type":"string"},{"name":"age","type":"uint256"},{"name":"mass","type":"uint256"}],"name":"stars","type":"tuple[]"},
+		{"name":"tokenToOwner","type":"map(uint256,uint256)"},
+		{"name":"tokenPrice","type":"map(uint256,uint256)"}
+	]
+}
